@@ -2,6 +2,13 @@
 <%@ page import="dao.*" %>
 <%@ page import="vo.*" %>
 <%@ page import="java.util.*" %>
+<%
+	if(session.getAttribute("loginAdminId") == null){
+		response.sendRedirect("/mall-admin/login.jsp");
+		return;
+	}
+	request.setCharacterEncoding("utf-8");
+%>
 <!DOCTYPE html>
 <html>
 <head>

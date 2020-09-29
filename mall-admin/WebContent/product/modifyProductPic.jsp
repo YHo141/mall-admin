@@ -1,5 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+if(session.getAttribute("loginAdminId") == null){
+	response.sendRedirect("/mall-admin/login.jsp");
+	return;
+}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +16,11 @@
 	int productId = Integer.parseInt(request.getParameter("productId"));
 %>
 	<h1>상품 이미지 수정</h1>
-	<form action="" method="post" enctype="multipart/form-data">
+	<form action="/mall-admin/product/modifyProductPicAction.jsp" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="productId" value="<%=productId %>">
 		<div>
-		<input type="file">
+		이미지 선택 :
+		<input type="file" name="productPic">
 		</div>
 		<div>
 			<button type="submit">이미지 수정</button>

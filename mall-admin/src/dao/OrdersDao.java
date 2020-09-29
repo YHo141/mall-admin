@@ -95,7 +95,7 @@ public class OrdersDao {
 		conn.close();
 	}
 	
-	//	
+	
 	public Orders selectOrdersOne(int ordersId) throws Exception{
 		
 		Orders orders = null;

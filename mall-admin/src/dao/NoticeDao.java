@@ -37,11 +37,10 @@ public class NoticeDao {
 	public void insertNotice(Notice notice) throws Exception{
 		DBUtil dbUtil = new DBUtil();
 		Connection conn = dbUtil.getConection();
-		String sql = "insert into notice(notice_title, notice_content, notice_date) values(?,?,?)";
+		String sql = "insert into notice(notice_title, notice_content, notice_date) values(?,?,now())";
 		PreparedStatement stmt = conn.prepareStatement(sql);
 		stmt.setString(1, notice.getNoticeTitle());
 		stmt.setString(2, notice.getNoticeContent());
-		stmt.setString(3, notice.getNoticeDate());
 		stmt.executeUpdate();
 		
 		conn.close();

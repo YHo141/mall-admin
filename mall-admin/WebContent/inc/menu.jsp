@@ -19,7 +19,7 @@
 	</li>
 	
 	<li class="nav-item">
-		<a class="nav-link text-light" data-toggle="tab" role="button" href="/mall-admin/member/memberList.jsp">[공지사항 수정]</a>
+		<a class="nav-link text-light" data-toggle="tab" role="button" href="/mall-admin/notice/noticeList.jsp">[공지사항 수정]</a>
 	</li>
 	
 	<li class="nav-item">

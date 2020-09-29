@@ -138,4 +138,20 @@ public class ProductDao {
 		System.out.println(row+"<-- row");
 		
 	}
+	
+	public void updateImg(Product product) throws Exception{
+		
+		DBUtil dbUtil = new DBUtil();
+		Connection conn = dbUtil.getConection();
+		
+		String sql = "update product set product_pic=? where product_id=?";
+		PreparedStatement stmt = conn.prepareStatement(sql);
+		
+		stmt.setString(1, product.getProductPic());
+		stmt.setInt(2, product.getProductId());
+		
+		stmt.executeUpdate();
+		
+		conn.close();
+	}
 }

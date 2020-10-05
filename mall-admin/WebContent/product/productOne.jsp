@@ -32,7 +32,7 @@
 	<table class="table table-info table-striped">
 		<tr>
 			<td>product_pic</td>
-			<td><img src="/mall-admin/img/<%=product.productPic %>">
+			<td><img src="/mall-admin/img/<%=product.productPic %>" width="300" height="300">
 			<a href="/mall-admin/product/modifyProductPic.jsp?productId=<%=productId%>">이미지수정</a>
 			</td>
 			
